@@ -44,6 +44,7 @@ code {
   .title {
     display:block;
     margin: 50px 0px;
+    font-size:70px;
   }
   .subtitle {
     font-weight:bold;
@@ -59,3 +60,13 @@ code {
   }
 }
 
+.sidebar {
+  .header {
+    font-size:28px;
+    font-weight: bold;
+    text-decoration:underline;
+    margin-bottom: 10px;
+  }
+}
+
+.avatar {max-width:256px; height:auto !important; overflow: hidden}

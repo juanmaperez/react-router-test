@@ -6446,7 +6446,8 @@ code {
 
 #home .title {
   display: block;
-  margin: 50px 0px; }
+  margin: 50px 0px;
+  font-size: 70px; }
 
 #home .subtitle {
   font-weight: bold;
@@ -6456,3 +6457,14 @@ code {
 #home .teams .team {
   margin: 10px 15px;
   cursor: pointer; }
+
+.sidebar .header {
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 10px; }
+
+.avatar {
+  max-width: 256px;
+  height: auto !important;
+  overflow: hidden; }

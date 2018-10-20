@@ -26,7 +26,7 @@ export default class Home extends Component {
             </div>
           </div>
           
-          <div class="teams has-text-centered">
+          <div className="teams has-text-centered">
             { teamNames.map(id =>(
               <Link className="team" key={id} to={`/${id}`}>
                 <TeamLogo id={id} width="125px" />
