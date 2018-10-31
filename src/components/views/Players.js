@@ -42,13 +42,12 @@ export default class Players extends Component {
 
           <Route path={`${match.url}/:playerId`} render={( {match})=>{
             if(loading === true) return null;
-
             const { name, position, teamId, number, avatar, apg, ppg, rpg,spg } = players.find((player) => slug(player.name) === match.params.playerId )
 
             return (
               <div className="column">
                   <div className="is-1by1">
-                    <img className="avatar is-rounded" src={`${avatar}`} alt={`${name}'s avatar`}/>
+                    <img className="avatar" src={`${avatar}`} alt={`${name}'s avatar`}/>
                   </div>
                   <div className="media-content">
                   <h1 className="title">{ name }</h1>
