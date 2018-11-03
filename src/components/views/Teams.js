@@ -46,9 +46,10 @@ export default class Teams extends Component {
                 : <div className="columns team">
                     <div className="column">
                       <TeamLogo id={team.id } className="center" />
-                      <h1><strong>{team.name}</strong></h1>
-                      <i>{team.established}</i>
-                      <h3>{team.coach}</h3>
+                      <h1 className="title"><strong>{team.name}</strong></h1>
+                      <h3 className="subtitle">{team.established}</h3>
+                      <i>{team.coach}</i>
+
                       <br />
                       <Link to={`/${match.params.teamId}`}>
                         <button className="button is-small is-primary">

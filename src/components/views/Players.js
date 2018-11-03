@@ -47,7 +47,9 @@ export default class Players extends Component {
             return (
               <div className="column">
                   <div className="is-1by1">
-                    <img className="avatar" src={`${avatar}`} alt={`${name}'s avatar`}/>
+                    <div className="avatar-wrapper">
+                      <img className="avatar" src={`${avatar}`} alt={`${name}'s avatar`}/>
+                    </div>
                   </div>
                   <div className="media-content">
                   <h1 className="title">{ name }</h1>

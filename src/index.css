@@ -6458,19 +6458,62 @@ code {
   margin: 10px 15px;
   cursor: pointer; }
 
-.sidebar .header {
-  font-size: 28px;
-  font-weight: bold;
-  text-decoration: underline;
-  margin-bottom: 10px;
-  margin-top: 40px; }
+.sidebar {
+  min-height: 500px; }
+  .sidebar .header {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
+    margin-top: 40px; }
 
-.avatar {
-  max-width: 256px;
-  height: auto !important;
-  overflow: hidden; }
+.avatar-wrapper {
+  display: block;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px; }
+  .avatar-wrapper .avatar {
+    max-width: 256px;
+    height: auto !important;
+    overflow: hidden; }
 
 .team {
   margin-top: 40px;
   width: 300px;
   text-align: center; }
+
+.championship {
+  margin-top: 30px; }
+  .championship li {
+    font-size: 20px;
+    display: inline-block;
+    margin: 0px 20px;
+    text-align: center; }
+    .championship li strong {
+      display: block; }
+
+.articles-title {
+  margin: 20px 0px;
+  font-size: 34px;
+  text-decoration: underline; }
+
+.articles {
+  margin: 30px auto;
+  width: 442px; }
+  .articles li {
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: left; }
+    .articles li .link {
+      color: #666; }
+      .articles li .link i {
+        font-size: 16px;
+        color: #ff5252;
+        opacity: .5; }
+
+.article-content {
+  padding-top: 60px; }
+  .article-content .title {
+    font-size: 44px; }
