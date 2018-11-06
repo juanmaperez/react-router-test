@@ -3,6 +3,8 @@ import { Route } from 'react-router-dom';
 import Sidebar from '../common/sidebar';
 import { getTeamsArticles } from '../../api';
 import Article from '../common/Article'
+import Loading from '../common/Loading'
+
 
 export default class ArticlesPage extends Component {
   state = {
@@ -26,7 +28,7 @@ export default class ArticlesPage extends Component {
     const { teamId } = params;
 
     return loading === true
-    ? <h1>Loading</h1>
+    ? <Loading />
     : <div className="articles-list container">
         <div className="columns">
           <Sidebar 
@@ -38,10 +40,10 @@ export default class ArticlesPage extends Component {
           <Route path={`${url}/:articleId`} render={({match})=>(
             <Article articleId={match.params.articleId } teamId={teamId}>
               {(article)=> !article
-              ? <h1>Loading</h1>
+              ? <Loading />
               : <article className="article-content column is-three-quarters" key={article.id}>
                 <h1 className="title">{article.title}</h1>
-                <p>{article.body}</p>
+                <p className="body">{article.body}</p>
               </article>
             }
             </Article>

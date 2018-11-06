@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { getTeamsArticles, getTeamNames } from '../../api';
 import TeamLogo from '../common/TeamLogo';
+import Loading from '../common/Loading';
 import Team from '../common/Team';
 import slug from 'slug';
 
@@ -34,7 +35,7 @@ export default class TeamPage extends Component {
     return (
        <Team id={teamId}>
        {(team) => team === null 
-        ? <h1>Loading...</h1>
+        ? <Loading />
         : <div className="columns is-centered">
             <div className="column has-text-centered">
               <TeamLogo id={teamId} className="has-text-centered" />
@@ -69,7 +70,7 @@ export default class TeamPage extends Component {
           </div>
         }
        </Team>
-       
+
     )
   }
 }

@@ -6,7 +6,7 @@ export default class Article extends Component {
   static propTypes = {
     teamId: PropTypes.string.isRequired,
     articleId: PropTypes.string.isRequired,
-    childre: PropTypes.func.isRequired
+    children: PropTypes.func.isRequired
   }
   
   state = {
@@ -27,9 +27,10 @@ export default class Article extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    if( this.props.articleId !== nextProps.articleId) return
-    const {articleId, teamId } = nextProps;
-    this.getArticle( teamId, articleId )
+    if( this.props.articleId !== nextProps.articleId){
+      const {articleId, teamId } = nextProps;
+      this.getArticle( teamId, articleId )
+    }
   }
 
   componentDidMount(){

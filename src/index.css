@@ -6514,6 +6514,23 @@ code {
         opacity: .5; }
 
 .article-content {
-  padding-top: 60px; }
+  padding: 60px 40px 20px; }
   .article-content .title {
     font-size: 44px; }
+  .article-content .body {
+    text-align: justify;
+    line-height: 1.8; }
+
+.pt40 {
+  padding-top: 40px; }
+
+.fade-enter {
+  opacity: 0;
+  z-index: 1; }
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 1000ms ease-in; }
+
+.fade-exit {
+  display: none; }

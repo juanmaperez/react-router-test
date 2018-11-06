@@ -4,6 +4,8 @@ import { getTeamNames } from '../../api';
 import { Route, Link } from 'react-router-dom';
 import TeamLogo from '../common/TeamLogo';
 import Team from '../common/Team';
+import Loading from '../common/Loading'
+
 
 
 export default class Teams extends Component {
@@ -42,7 +44,7 @@ export default class Teams extends Component {
             <div className="column">
               <Team id={ match.params.teamId}>
                 {(team) => team === null 
-                ? <h1>Loading...</h1>
+                ? <Loading />
                 : <div className="columns team">
                     <div className="column">
                       <TeamLogo id={team.id } className="center" />
