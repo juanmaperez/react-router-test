@@ -6,19 +6,20 @@ import { parse } from 'query-string';
 import slug from 'slug';
 import { TransitionGroup, CSSTransition} from 'react-transition-group';
 
-
 export default class Players extends Component {
   state = {
     players: [],
     loading: true
   }
+
   componentDidMount() {
     const { location } = this.props;
     
     location.search
     ? this.fetchPlayers(parse(location.search).teamId)
     : this.fetchPlayers();
-  } 
+  }
+
   fetchPlayers = (teamId) => {
     getPlayers(teamId)
       .then((players) => this.setState(()=>({
@@ -26,6 +27,7 @@ export default class Players extends Component {
         players
       })))
   }
+
   render() {
     const { players, loading } = this.state;
     const { match, location } = this.props; 
